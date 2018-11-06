@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 8011
+
+sprng:
+  profiles: dev
+  application:
+    name: movie-config-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-dev.com:7001/eureka/
+---
+server:
+  port: 8012
+
+sprng:
+  profiles: test
+  application:
+    name: movie-config-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-test.com:7001/eureka/
